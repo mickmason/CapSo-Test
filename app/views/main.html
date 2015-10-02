@@ -9,24 +9,83 @@
   <h4>Introduction</h4>
   <p>This task is designed to resemble our frontend development environment and get you working on some realistic dummy data.</p>
 
-  <p>We are interested in the price history of <a href="http://www.investopedia.com/university/bonds/">company bonds</a>. There is some raw data available from two API endpoints, which for this task are provided as files holding JSON data. A brief description of these files is provided after the requirements are defined. Please feel free to contact us if any aspects of the requirements are unclear.
+  <p>We are interested in the price history of <a href="http://www.investopedia.com/university/bonds/">company bonds</a>. There is some raw data available from two API endpoints, which for this task are provided as files on our server holding JSON data. A brief description of these files is provided after the requirements are defined.</p>
 
+  <p>Extend this stub application to fulfill as many as possible of the requirements described below. Bonus points are given for well-thought out UI decisions, useful interactivity or interesting features beyond the requirements. Don't worry too much about doing things perfectly; this isn't necessarily intended to be a production ready scalable app!</p>
+  <p><a ui-sref="companies">This link</a> should go to the main page listing the companies in the dataset.</p>
+
+  <p>Please feel free to contact us if any aspects of the requirements are unclear.</p>
+
+  <br>
   <h4>Requirements</h4>
-  The system...
+  The system:
   <ul>
 	  <li><b>MUST</b> display a list of the companies in the <tt>companies.json</tt> dataset.</li>
-	  <li><b>MUST</b> provide a view for each company, displaying their basic info and details on their relevant bonds.</li>
+	  <li><b>MUST</b> provide a view for each company, displaying their basic info and some details on their relevant bonds.</li>
 	  <li><b>SHOULD</b> display the history of the price of each bond.</li>
-	  <li><b>COULD</b> show a list of the highest five moving bond prices. This means the difference between the opening and closing bond price for a particular time period.</li>
+	  <li><b>COULD</b> show a list of the highest five moving bond prices. This means the difference between the opening and closing bond price for a particular time period. The time period could be set to 1 day, 1 week or 1 month.</li>
   </ul>
 
+  <br>
   <h4>JSON file description</h4>
-    Two files are provided representing the output from two API services:
-	<ul>
-		<li>app/json/companies.json</li>
-		<li>app/json/bonds.json</li>
+  Two files are provided representing the output from two API services:
+  <ul>
+	  <li><b>https://s3-eu-west-1.amazonaws.com/capso.test.data/companies.json</b></li>
+	  <ul>
+		  <li>
+			  &nbsp;&nbsp;This example describes the basic information for companies with IDs 1 and 2:
+			  <pre>
+{
+	results: [
+		{
+			companyId: 1,
+			legalName: "Coca Cola Inc.",
+			address: "New York",
+			revenue: 1000000000,
+			employees: 23450,
+			industry: Food
+		},
+		{
+			companyId: 2,
+			legalName: "Pepsi Cola Inc.",
+			address: "London",
+			revenue: 400000000,
+			employees: 5430,
+			industry: Food
+		}
+	],
+	total: 2
+}</pre>
+		  </li>
+	  </ul>
+	  <li><b>https://s3-eu-west-1.amazonaws.com/capso.test.data/bondmaster.json</b></li>
+	  <ul>
+		  <li>
+			  &nbsp;&nbsp;This example describes the basic information for bond IDs 1 and 5. The <b>issuerId</b> fields correspond to the company IDs listed in the <b>companies.json</b> dataset. Note that each issuer company might have multiple bonds.
+			  <pre>
+{
+	1: {
+		cusip: 3125412,
+		couponRate: 8.21,
+		issuerId: 2,
+		prices: [ { time: x, price: y }, ... ]
+	},
+	5: {
+		cusip: 888,
+		couponRate: 5,
+		issuerId: 3,
+		prices: [ ... ]
+	}
+}</pre>
+		  </li>
+	  </ul>
+  </ul>
 
+  <br>
+  <h4>Submission instructions</h4>
+  When you're happy, either push your own fork of the repo to Bitbucket, or zip the entire directory and send it to ...
 
+  <br>
   <h4>Possibly helpful links</h4>
   <ul>
     <li>AngularJS - <a href="https://angularjs.org/">https://angularjs.org/</a></li>
