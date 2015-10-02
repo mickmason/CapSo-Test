@@ -8,21 +8,20 @@
  *
  * Main module of the application.
  */
-angular
-  .module('capsotestApp', [
-    'ngAnimate',
-    'ngResource',
-    'ngSanitize',
-    'ngTouch',
-    'ui.router'
-  ]).config(function($stateProvider, $urlRouterProvider) {
-	  
-	  $urlRouterProvider.otherwise("/");
+angular.module('capsotestApp', [
+	'ui.router',
+	'ngAnimate',
+	'ngResource',
+	'ngSanitize',
+	'ngTouch'
+]).config(function($stateProvider, $urlRouterProvider) {
 
- 	 $stateProvider
-    .state('main', {
-      url: "/",
-      templateUrl: "views/main.html",
-      controler: 'MainCtrl'
-    });
+	$urlRouterProvider.otherwise('/');
+
+	$stateProvider
+		.state('main', {
+			url: '/',
+			templateUrl: 'views/main.html',
+			controller: 'MainCtrl'
+		});
 });
