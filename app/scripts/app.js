@@ -30,6 +30,13 @@ angular.module('capsotestApp', [
 			templateUrl: 'views/companies.html',
 			controller: 'CompaniesCtrl'
 		});
+     $stateProvider
+		.state('company', {
+			url: '/company/:coId',
+			templateUrl: 'views/company.html',
+			controller: 'CompanyCtrl',
+
+		});
 });
 
 
