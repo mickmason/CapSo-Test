@@ -24,4 +24,12 @@ angular.module('capsotestApp', [
 			templateUrl: 'views/main.html',
 			controller: 'MainCtrl'
 		});
+    $stateProvider
+		.state('companies', {
+			url: '/companies',
+			templateUrl: 'views/companies.html',
+			controller: 'CompaniesCtrl'
+		});
 });
+
+
