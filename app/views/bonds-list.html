@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-md-12">
+        <table class="table-striped table">
+            <thead>
+                <tr>
+                        <th>Bond id</th><th>Coupon Rate</th><th>Latest price</th><th>Change +/-</th><th>&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="bond in companyBonds track by $index">
+                        <td>{{bond.bondId}}</td><td>{{bond.couponRate}}</td><td>{{bond.lastPrice}}</td><td>{{bond.change}}</td><td><a ui-sref="bond({bondId: bond.bondId})" class="btn btn-default">View bond</a></td>
+                </tr>        
+            </tbody>
+        </table>      
+    </div>
+</div>

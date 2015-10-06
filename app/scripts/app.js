@@ -36,7 +36,17 @@ angular.module('capsotestApp', [
 			templateUrl: 'views/company.html',
 			controller: 'CompanyCtrl',
 
-		});
+		}).state('company.companybonds', {
+			templateUrl: 'views/bonds-list.html',
+			controller: 'CompanyCtrl',
+
+		})
+      $stateProvider.state('bond', {
+        url: '/bond/:bondId', 
+        	templateUrl: 'views/bond.html',
+            controller: 'BondsCtrl'
+        
+    }) ;
 });
 
 

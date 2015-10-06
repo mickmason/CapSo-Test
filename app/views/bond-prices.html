@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-md-12">
+        <table class="table-striped table">
+            <thead>
+                <tr>
+                        <th>Date</th><th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="bondPrice in bond.priceHistory">
+                        <td>{{bondPrice.timestamp}}</td><td>{{bondPrice.price}}</td>
+                </tr>        
+            </tbody>
+        </table>      
+    </div>
+</div>
