@@ -1,6 +1,7 @@
+<!-- All companies view -->
 <h1>Companies</h1>
 <div class="list-group" >
-  <a ui-sref="company({coId: co.companyId, coName: co.legalName})" class="list-group-item" ng-repeat="co in companies">
+  <a ui-sref="company({coId: co.companyId})" class="list-group-item" ng-repeat="co in companies">
     <h4 class="list-group-item-heading">{{co.legalName}}</h4>
     <p class="list-group-item-text">{{co.address}}</p>
   </a>
