@@ -18,6 +18,11 @@ I chose to serve up the data from a local server in order to get around any cros
 
 Change the get URLs in each of the getData functions to switch back to your own URLs.
 
+###On the UI
+I didn't spend too much time on the UI as I wanted to work the data properly and wire it into the app correctly. I thought a little bit about the underlying IA so that interaction is smooth. 
+
+I have a strond understading of UI/UX concepts and I would love to apply those properly to the task.
+
 ###Display a list of the companies in the ``companies.json`` dataset
 I set up a new state in app.js which bound a ``CompaniesCtrl`` to a ``companies`` state with a ``companies.html`` view.
 
