@@ -60,3 +60,4 @@ I would get the start and end time for the time period.
 * If the difference is positive I would compare the difference in this bond with each of those in the topFive array. 
 * If the difference is greater for the current bond than some bond in the arry I would add it to the array in the appropriate slot and shove one bond out.
 * This would probably require a recursive function to push each element value down one place.
+* I would reuse the bond-listing template for the view
