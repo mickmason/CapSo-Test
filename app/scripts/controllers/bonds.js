@@ -19,7 +19,11 @@ angular.module('capsotestApp')
                 }
             }        
             console.log($scope.bond.prices.length) ;
-            /* Get its price history. I got the closing price each day for the bond - there are six prices for each day, I got the last one and I reversed the data to show the most recent first. */
+            /* 
+                Get its price history. 
+                I got the closing price each day for the bond - there are six prices for each day, I got the last one and I reversed the data to show the most recent first. 
+                I added a priceHistory array to the scope to make this easy to access in the view.
+            */
             $scope.bond.priceHistory = [] ;
             for (var i=($scope.bond.prices.length - 1); i>=5; i -= 6) {
                 //console.log(i) ;    

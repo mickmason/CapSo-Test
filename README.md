@@ -11,6 +11,8 @@ Hi there. My name is Michael. :) This describes my submission to your test.
 
 I got through three of the four task, unfortunately time was against me. However, I found the test really useful. I also enjoyed working with ``ui-router``. That's powerfull!
 
+I will say that I am a relative novice with Angular and this was a learning experience. But I enjoyed it and I look forward to working with it more in the future, hopefully with yourselves. :)
+
 ###On the data
 I chose to serve up the data from a local server in order to get around any cross-origin request issues. I set up a couple of php files to get the data from.
 
