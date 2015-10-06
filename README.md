@@ -23,14 +23,16 @@ I didn't spend too much time on the UI as I wanted to work the data properly and
 
 I have a strond understading of UI/UX concepts and I would love to apply those properly to the task.
 
-###Display a list of the companies in the ``companies.json`` dataset
+###The tasks
+
+####1. Display a list of the companies in the ``companies.json`` dataset
 I set up a new state in app.js which bound a ``CompaniesCtrl`` to a ``companies`` state with a ``companies.html`` view.
 
 The controller is in ``companies.js`` and the ``GetCompaniesData`` service is injected to it. It gets all companies data and adds them to the scope. 
 
 ``companies.html`` uses this to fill out the companies information. In the view there is a ui-sref which changes the state to ``company`` and passes through a company id to the new state.
 
-###Provide a view for each company, displaying their basic info and some details on their relevant bonds
+####2. Provide a view for each company, displaying their basic info and some details on their relevant bonds
 The ``company`` state in app.js takes the company id passed in from ``companies.html`` and this is used in the ``CompaniesCtrl`` to parse out bonds from the ``bondmaster.json`` dataset. See ``controllers/company.js``.
 
 **Note**: it is slow as quite a bit of data is processed in the client. Obviously, this would work better with a full API available. 
@@ -39,7 +41,7 @@ By default the bonds information is not visible. I set up a nested ``company.com
 
 There is a button in each bond listing to view the full bond information. The ui-sref directive on that switches the state to ``bond`` and passes thorough a bondId param. 
 
-###Display the history of the price of each bond
+####3. Display the history of the price of each bond
 The ``BondsCtrl`` in ``bonds.js`` gets the data for a particular bond in the ``bond`` state. 
 
 To show the price history I got the closing price each day from the bond prices array - there are six prices for each day, I got the last one for each and I reversed the data to show the most recent first. It's a bit crude and it would be better to base it off a time but it works for now and could be improved with a little date maniputation. I added a priceHistory array to the scope to make this easy to access in the view.
@@ -48,7 +50,7 @@ I format the date and pull it into ``bond-prices.html`` view along with the pric
 
 **Note**: I would look to present this as a graph in real life.
 
-###Show a list of the highest five moving bond prices for a particular time period
+####4. Show a list of the highest five moving bond prices for a particular time period
 
 I didn't have time to get this one done, however I feel it is doable. It's about processing the bonds data. 
 
