@@ -4,24 +4,22 @@
 
 * Use bower and npm to install dependencies
 * Run using `grunt serve`
-* Go to localhost:9000 and further instructions will be provided there.
+* Go to localhost:9000 and further instructions are provided there.
 
 ##My implementation
-Hi there. My name is Michael. :) This describes my submission to your test.
+Hi there. This is my submission to a code test for a company in the finacial business intelligence area.
 
-I got through three of the four task, unfortunately time was against me. However, I found the test really useful. I also enjoyed working with ``ui-router``. That's powerfull!
-
-I will say that I am a relative novice with Angular and this was a learning experience. But I enjoyed it and I look forward to working with it more in the future, hopefully with yourselves. :)
+I got through three of the four tasks, unfortunately time was against me. I found the test really useful and I enjoyed working with ``ui-router``. 
 
 ###On the data
 I chose to serve up the data from a local server in order to get around any cross-origin request issues. I set up a couple of php files to get the data from.
 
-Change the get URLs in each of the getData functions to switch back to your own URLs.
-
+Change the get URLs in each of the getData functions to switch to your own URLs.
+ 
 ###On the UI
 I didn't spend too much time on the UI as I wanted to work the data properly and wire it into the app correctly. I thought a little bit about the underlying IA so that interaction is smooth. 
 
-I have a strond understading of UI/UX concepts and I would love to apply those properly to the task.
+I have a strond understading of UI/UX concepts and I will apply those properly to the task.
 
 ###The tasks
 
