@@ -7,7 +7,7 @@
 * Go to localhost:9000 and further instructions are provided there.
 
 ##My implementation
-Hi there. This is my submission to a code test for a company in the finacial business intelligence area.
+Hi there. This is a code test for a finacial business application in Angular.
 
 I got through three of the four tasks, unfortunately time was against me. I found the test really useful and I enjoyed working with ``ui-router``. 
 
